@@ -1,5 +1,11 @@
 html {
+  box-sizing: border-box;
   font-size: 62.5%; /**Reset para REMS 62.5% = 10px de 16px**/
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 /*Body*/
@@ -9,6 +15,10 @@ body {
 }
 
 /*Globales*/
+
+img {
+  max-width: 100%;
+}
 .contenedor {
   max-width: 120rem;
   margin: 0 auto;
@@ -37,6 +47,28 @@ h4 {
 }
 .centrar-texto {
   text-align: center;
+}
+.d-block {
+  display: block !important;
+}
+
+/**Botones**/
+.boton {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  margin-top: 3rem;
+  text-align: center;
+  display: inline-block;
+}
+.boton-amarillo {
+  background-color: #e08709;
+}
+.boton-verde {
+  background-color: #71b100;
 }
 
 /*Header*/
@@ -94,4 +126,90 @@ h4 {
 }
 .icono h3 {
   text-transform: uppercase;
+}
+/**Anuncios**/
+
+.contenedor-anuncios {
+  display: flex;
+  justify-content: space-between;
+}
+.anuncio {
+  flex-basis: calc(33.3% - 1rem);
+  border: 1px solid #b5b5b5;
+  background-color: #f5f5d5;
+}
+.contenido-anuncio {
+  padding: 2rem;
+}
+.contenido-anuncio h3,
+.contenido-anuncio p {
+  margin: 0;
+}
+.precio {
+  color: #71b100;
+  font-weight: 700;
+}
+.iconos-caracteristicas {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.iconos-caracteristicas li {
+  /**flex: 1;**/
+  display: flex;
+}
+.iconos-caracteristicas li img {
+  margin-right: 2rem;
+}
+.ver-todas {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/**Contacto Home**/
+.imagen-contacto {
+  background-image: url(../img/encuentra.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+}
+.contenido-contacto {
+  flex: 1;
+  color: #ffffff;
+}
+.contenido-contacto p {
+  font-size: 1.8rem;
+}
+
+/**Seccion inferior**/
+.seccion-inferior {
+  display: flex;
+  justify-content: space-between;
+}
+.seccion-inferior .blog {
+  flex-basis: 60%;
+}
+.seccion-inferior .testimoniales {
+  flex-basis: calc(40% - 2rem);
+}
+.entrada-blog {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.entrada-blog:last-of-type {
+  margin-bottom: 0;
+}
+.entrada-blog .imagen {
+  flex-basis: 40%;
+}
+.entrada-blog .texto-entrada {
+  flex-basis: calc(60% - 3rem);
+}
+.texto-entrada h4 {
+  margin: 0;
+  line-height: 1.4;
 }
